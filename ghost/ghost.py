@@ -372,6 +372,13 @@ class Ghost(object):
         except:
             raise Exception("no webview to close")
 
+    def open_html(self, html):
+        """Opens a page based on pre-fetched HTML content
+        
+        :param html: Html content to load
+        """
+        self.main_frame.setHtml(html)  
+
     def open(self, address, method='get', headers={}, auth=None):
         """Opens a web page.
 
